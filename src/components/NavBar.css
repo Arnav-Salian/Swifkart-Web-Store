@@ -3,6 +3,10 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
+        -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;          /* Standard syntax */
 }
 
 .nav-bar{
@@ -24,7 +28,7 @@
 }
 
 .logo-container .logo{
-    width: 270px;
+    width: 230px;
     object-fit: contain;
 }
 
