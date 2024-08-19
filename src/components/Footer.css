@@ -78,6 +78,8 @@
 
 .footer-section ul li:hover{
     text-decoration: none;
+    background-color: rgb(78, 78, 78);
+    border-radius: 5px;
 }
 
 .footer-section a{

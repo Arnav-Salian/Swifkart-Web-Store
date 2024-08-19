@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Footer.css'
 import footerMap from '../assets/Footer-Map.png'
 
@@ -17,21 +18,21 @@ function Footer() {
             <div className="footer-section">
               <p className='footer-title'>Quick Links</p>
               <ul>
-                <li>Terms and Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Returns Policy</li>
-                <li>Documentation</li>
-                <li>Sitemap</li>
+                <Link to=""><li>Terms and Conditions</li></Link>
+                <Link to=""><li>Privacy Policy</li></Link>
+                <Link to=""><li>Returns Policy</li></Link>
+                <Link to=""><li>Documentation</li></Link>
+                <Link to=""><li>Sitemap</li></Link>
               </ul>
             </div>
             <div className="footer-section">
               <p className='footer-title'>Social Media</p>
               <ul>
-                <li>Twitter X</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>YouTube</li>
-                <li>LinkedIn</li>
+                <a href="" target='_blank'><li>Twitter X</li></a>
+                <a href="" target='_blank'><li>Instagram</li></a>
+                <a href="" target='_blank'><li>Facebook</li></a>
+                <a href="" target='_blank'><li>YouTube</li></a>
+                <a href="" target='_blank'><li>LinkedIn</li></a>
               </ul>
             </div>
             <div className="footer-section">
