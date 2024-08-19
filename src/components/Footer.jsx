@@ -48,7 +48,7 @@ function Footer() {
       </div>
       <div className="mobile-wrapper">
         <p className="credits">
-          © All Rights Reserved 2024 | Website developed by <a href="https://www.linkedin.com/in/arnavs27" target="_blank">Arnav Salian</a>
+          © 2024 All Rights Reserved | Website developed by <a href="https://www.linkedin.com/in/arnavs27" target="_blank">Arnav Salian</a>
         </p>
       </div>
     </>
