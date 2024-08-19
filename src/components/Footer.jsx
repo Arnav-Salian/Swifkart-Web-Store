@@ -6,11 +6,7 @@ import footerMap from '../assets/Footer-Map.png'
 function Footer() {
   return (
     <>
-      <div className="mobile-wrapper">
-        <p className="credits">
-          © All Rights Reserved 2024 | Website developed by <a href="https://www.linkedin.com/in/arnavs27" target="_blank">Arnav Salian</a>
-        </p>
-      </div>
+      
 
       <div className="desktop-bg">
         <div className="desktop-wrapper">
@@ -49,6 +45,11 @@ function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mobile-wrapper">
+        <p className="credits">
+          © All Rights Reserved 2024 | Website developed by <a href="https://www.linkedin.com/in/arnavs27" target="_blank">Arnav Salian</a>
+        </p>
       </div>
     </>
   )
