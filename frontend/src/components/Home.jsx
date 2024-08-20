@@ -1,12 +1,20 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import { productsApi, useGetAllProductsQuery } from '../features/productsApi';
 import './Home.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { addToCart } from '../features/cartSlice';
+import { toast } from 'react-hot-toast';
 
 function Home() {
 
-  const {data, error, isLoading} = useGetAllProductsQuery()
+  const {data, error, isLoading} = useGetAllProductsQuery();
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+    toast.success(`${product.name} added to cart!`)
+  }
   return (
     <>
       <div className="home-wrapper">
@@ -26,7 +34,7 @@ function Home() {
                     </div>
                     <span className="price">£{product.price}</span>
                   </div>
-                  <button><FontAwesomeIcon className='add-cart-icon' icon={faCartShopping}/>Add To Cart</button>
+                  <button onClick={() => handleAddToCart(product)}><FontAwesomeIcon className='add-cart-icon' icon={faCartShopping}/>Add To Cart</button>
                 </div> )}
             </div>
             </> }
