@@ -79,6 +79,7 @@
     text-decoration: none;
     background-color: rgb(0, 61, 112);
     border-radius: 5px;
+    color: rgb(200, 230, 255);
 }
 
 .footer-section a{
@@ -87,6 +88,10 @@
 
 .footer-section a:hover{
     text-decoration: none;
+}
+
+.footer-icons{
+    margin-right: 5px;
 }
 
 

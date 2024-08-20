@@ -18,9 +18,13 @@
     font-size: 100px;
     font-weight: 600;
     color: rgb(6, 53, 95);
+    text-align: center;
+    line-height: 100%;
 }
 
 .page-not-found{
+    line-height: 150%;
+    text-align: center;
     font-size: 45px;
     margin-bottom: 50px;
     color: rgb(53, 53, 53);
