@@ -5,16 +5,15 @@ import './Home.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { addToCart } from '../features/cartSlice';
-import { toast } from 'react-hot-toast';
+
 
 function Home() {
-
   const {data, error, isLoading} = useGetAllProductsQuery();
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
-    toast.success(`${product.name} added to cart!`)
   }
+
   return (
     <>
       <div className="home-wrapper">
