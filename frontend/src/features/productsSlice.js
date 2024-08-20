@@ -10,7 +10,7 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
     "products/productsFetch", 
     async (id = null, { rejectWithValue }) => {
-        const response = await axios.get("http://localhost:5000/products");
+        const response = await axios.get("http://localhost:5001/products");
         return response?.data;
     }
 );
@@ -32,7 +32,9 @@ const productsSlice = createSlice({
             })
             .addCase(productsFetch.rejected, (state, action) => {
                 state.status = "rejected";
+                state.error = action.payload || action.error.message;
             });
+            
     },
 });
 
