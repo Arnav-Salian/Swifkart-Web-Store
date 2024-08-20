@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { productsApi, useGetAllProductsQuery } from '../features/productsApi';
 import './Home.css'
@@ -8,10 +9,13 @@ import { addToCart } from '../features/cartSlice';
 
 
 function Home() {
+  window.scroll(0, 0);
   const {data, error, isLoading} = useGetAllProductsQuery();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleAddToCart = (product) => {
     dispatch(addToCart(product))
+    navigate("/cart");
   }
 
   return (

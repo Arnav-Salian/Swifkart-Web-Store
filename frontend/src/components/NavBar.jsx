@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +7,7 @@ import swifkartLogo from '../assets/Swifkart-Logo.png'
 import './NavBar.css'
 
 function NavBar() {
+  const {cartTotalQuantity} = useSelector(state => state.cart);
   return (
     <>
       <div className="header-bg">
@@ -18,7 +20,7 @@ function NavBar() {
               <div className="cart-icon-container">
                 <FontAwesomeIcon className='cart-icon' icon={faCartShopping}/>
                 <div className="cart-quantity">
-                  <p>2</p>
+                  <p>{cartTotalQuantity}</p>
                 </div>
               </div>
             </Link>

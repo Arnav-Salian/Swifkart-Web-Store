@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 import productsReducer, { productsFetch } from './features/productsSlice.js';
 import { productsApi } from './features/productsApi.js';
-import cartReducer from './features/cartSlice.js';
+import cartReducer, { getTotals } from './features/cartSlice.js';
 
 const store = configureStore({
   reducer: {
@@ -22,6 +22,7 @@ const store = configureStore({
 });
 
 store.dispatch(productsFetch());
+store.dispatch(getTotals());
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

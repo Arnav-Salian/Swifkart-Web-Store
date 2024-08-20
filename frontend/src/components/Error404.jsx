@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
 function Error404() {
+  document.title = "Page Not Found | Swifkart Online Store"
+  window.scroll(0, 0);
   return (
     <>
         <div className="error-page-wrapper">

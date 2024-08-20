@@ -18,7 +18,7 @@ function App() {
             <Route path="*" element={<Error404 />} />
           </Routes>
         <Footer/>
-        <Toaster position="top-center" reverseOrder={false} />
+        <Toaster position="bottom-left" reverseOrder={false} />
       </BrowserRouter>
     </>
   )
