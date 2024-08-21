@@ -5,17 +5,17 @@ import { productsApi, useGetAllProductsQuery } from '../features/productsApi';
 import './Home.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { addToCart } from '../features/cartSlice';
-
+import { addToCart, getTotals } from '../features/cartSlice'; // import getTotals
 
 function Home() {
+  document.title = "Swifkart Online Store";
   window.scroll(0, 0);
   const {data, error, isLoading} = useGetAllProductsQuery();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-    navigate("/cart");
+    dispatch(addToCart(product));  
+    dispatch(getTotals());         
   }
 
   return (
@@ -23,7 +23,7 @@ function Home() {
       <div className="home-wrapper">
         <div className="home-container">
             {isLoading ? <p>Loading...</p> : error ? 
-            <p>An error occured...</p> : 
+            <p>An error occurred...</p> : 
             <>
             <div className="products">
               {data?.map(product => <div key={product.id} className="product">
@@ -37,7 +37,9 @@ function Home() {
                     </div>
                     <span className="price">£{product.price}</span>
                   </div>
-                  <button onClick={() => handleAddToCart(product)}><FontAwesomeIcon className='add-cart-icon' icon={faCartShopping}/>Add To Cart</button>
+                  <button onClick={() => handleAddToCart(product)}>
+                    <FontAwesomeIcon className='add-cart-icon' icon={faCartShopping}/>Add To Cart
+                  </button>
                 </div> )}
             </div>
             </> }
@@ -47,4 +49,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;

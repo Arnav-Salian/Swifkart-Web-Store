@@ -36,16 +36,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    border: 3px solid rgb(33, 33, 33);
+    gap: 10px;
+    border: 3px solid rgb(220, 220, 220);
     padding: 3px 5px;
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(220, 220, 220);
     border-radius: 5px;
 }
 
 .cart-icon{
-    color: rgb(231, 231, 231);
-    font-size: 27px;
+    color: rgb(79, 79, 79);
+    font-size: 23px;
     
 }
 
@@ -53,24 +53,99 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(79, 79, 79);
     border-radius: 5px;
-    color: black;
-    font-size: 23px;
+    color: white;
+    font-size: 20px;
     font-weight: 500;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
+}
+
+.right-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-icon{
+    padding-top: 3px;
+    font-size: 23px;
+    color: rgb(79, 79, 79);
+}
+
+.nav-links-section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(79, 79, 79);
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links-section ul a{
+    position: relative;
+    color: rgb(79, 79, 79);
+}
+
+.nav-links-section ul a::after{
+    position: absolute;
+    content: "";
+    background-color: rgb(79, 79, 79);
+    height: 3px;
+    width: 0;
+    border-radius: 1px;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.15s ease;
+}
+
+.nav-links-section ul a:hover::after{
+    width: 100%;
+}
+
+.menu-icon{
+    font-size: 30px;
+    color: rgb(79, 79, 79);
+    cursor: pointer;
+    display: none;
+}
+
+.sub-header-bg{
+    padding: 7px;
+    background-color: rgb(43, 43, 43);
+}
+
+.mobile-nav-links-section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    list-style: none;
+    cursor: pointer;
+}
+
+.mobile-nav-links-section ul a{
+    color: white;
+    text-decoration: none;
 }
 
 @media (max-width:700px) {
-
-    .cart-icon{
-        font-size: 20px;
+    .nav-links-section{
+        display: none;
     }
+}
 
-    .cart-quantity{
-        font-size: 20px;
-        width: 35px;
-        height: 35px;
+@media (min-width:700px){
+    .sub-header-bg{
+        display: none;
     }
 }
