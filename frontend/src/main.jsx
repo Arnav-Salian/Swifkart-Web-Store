@@ -24,7 +24,6 @@ const store = configureStore({
 store.dispatch(productsFetch());
 store.dispatch(getTotals());
 
-console.log('API URL:', process.env.REACT_APP_API_URL);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

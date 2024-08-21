@@ -10,7 +10,7 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
     "products/productsFetch", 
     async (id = null, { rejectWithValue }) => {
-        const response = await axios.get(process.env.REACT_APP_API_URL);
+        const response = await axios.get("https://swifkart-backend.vercel.app/products");
         return response?.data;
     }
 );
