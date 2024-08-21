@@ -1,18 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "../backend/index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    { "src": "/products", "dest": "/backend/index.js" },
-    { "src": "/[^.]+", "dest": "/", "status": 200 },
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
+  "builds": [{"src": "../backend/index.js","use": "@vercel/node"}],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
