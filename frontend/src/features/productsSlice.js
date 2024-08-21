@@ -1,15 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios';
 
-// Define base URLs for different environments
-const developmentBaseUrl = 'http://localhost:5001/';
-const productionBaseUrl = 'https://swifkart-backend.vercel.app/';
-
-// Determine the base URL based on the environment
-const baseUrl = window.location.hostname === 'localhost'
-  ? developmentBaseUrl
-  : productionBaseUrl;
-
 const initialState = {
     items: [],
     status: null,
@@ -19,12 +10,8 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
     "products/productsFetch", 
     async (id = null, { rejectWithValue }) => {
-        try {
-            const response = await axios.get(`${baseUrl}products`);
-            return response?.data;
-        } catch (error) {
-            return rejectWithValue(error.response?.data || error.message);
-        }
+        const response = await axios.get("http://localhost:5001/products");
+        return response?.data;
     }
 );
 
@@ -47,6 +34,7 @@ const productsSlice = createSlice({
                 state.status = "rejected";
                 state.error = action.payload || action.error.message;
             });
+            
     },
 });
 
