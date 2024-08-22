@@ -240,6 +240,25 @@
     color: white;
 }
 
+.cart-login{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 3px solid rgb(255, 153, 0);
+    background-color: rgba(255, 239, 216, 0.847);
+    color: rgb(255, 153, 0);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.cart-login:hover{
+    background-color: rgb(255, 153, 0);
+    color: white;
+}
+
 .back-to-shop{
     background:none;
     border: none;
@@ -263,6 +282,7 @@
 .cart-icons-checkout{
     margin-left: 5px;
 }
+
 
 #confirm-btn{
     padding: 10px 20px;

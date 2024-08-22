@@ -2,7 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong, faArrowRightToBracket, faCartShopping, faTrash, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { faCcStripe } from '@fortawesome/free-brands-svg-icons'
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css';
 import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from '../features/cartSlice';
@@ -11,7 +12,9 @@ import { toast } from 'react-hot-toast'
 function Cart() {
   document.title = "Cart | Swifkart Online Store";
   const cart = useSelector(state => state.cart);
+  const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(()=>{
     dispatch(getTotals())
@@ -105,9 +108,18 @@ function Cart() {
                       <span className='amount'>£{(cart.cartTotalAmount).toFixed(2)}</span>
                     </div>
                     <p>Taxes and shipping calculated at checkout</p>
-                    <button className='checkout-btn'>
-                      Checkout <FontAwesomeIcon className='cart-icons-checkout' icon={faArrowRightToBracket} />
-                    </button>
+                    {auth._id ? (
+                      <button className='checkout-btn'>
+                        Checkout <FontAwesomeIcon className='cart-icons-checkout' icon={faCcStripe} />
+                      </button>
+                    ) : (
+                      <button
+                        className="cart-login"
+                        onClick={() => navigate("/login")}
+                      >
+                        Login to Checkout <FontAwesomeIcon className='cart-icons-checkout' icon={faArrowRightToBracket} />
+                      </button>
+                    )}
                     <Link to="/">
                       <button className='back-to-shop'>
                         <FontAwesomeIcon className='cart-icons' icon={faArrowLeftLong} /> Continue Shopping
