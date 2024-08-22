@@ -28,11 +28,11 @@ function Footer() {
             <div className="footer-section">
               <p className='footer-title'>Social Media</p>
               <ul>
-                <a href="" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faXTwitter}/>Twitter X</li></a>
-                <a href="" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faInstagram}/>Instagram</li></a>
-                <a href="" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faFacebook}/>Facebook</li></a>
-                <a href="" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faYoutube}/>YouTube</li></a>
-                <a href="" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faLinkedin}/>LinkedIn</li></a>
+                <a href="https://twitter.com/redbull" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faXTwitter}/>Twitter X</li></a>
+                <a href="https://www.instagram.com/redbull/" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faInstagram}/>Instagram</li></a>
+                <a href="https://www.facebook.com/redbull" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faFacebook}/>Facebook</li></a>
+                <a href="https://www.youtube.com/user/redbull" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faYoutube}/>YouTube</li></a>
+                <a href="https://www.linkedin.com/company/red-bull/" target='_blank'><li><FontAwesomeIcon className='footer-icons' icon={faLinkedin}/>LinkedIn</li></a>
               </ul>
             </div>
             <div className="footer-section">
