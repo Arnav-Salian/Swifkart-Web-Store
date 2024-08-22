@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css';
 import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from '../features/cartSlice';
 import { toast } from 'react-hot-toast'
+import PayButton from './PayButton';
 
 function Cart() {
   document.title = "Cart | Swifkart Online Store";
@@ -109,9 +110,7 @@ function Cart() {
                     </div>
                     <p>Taxes and shipping calculated at checkout</p>
                     {auth._id ? (
-                      <button className='checkout-btn'>
-                        Checkout <FontAwesomeIcon className='cart-icons-checkout' icon={faCcStripe} />
-                      </button>
+                      <PayButton cartItems = {cart.cartItems}/>
                     ) : (
                       <button
                         className="cart-login"
