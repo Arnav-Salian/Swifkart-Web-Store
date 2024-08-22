@@ -6,7 +6,7 @@ import { faCcStripe } from '@fortawesome/free-brands-svg-icons';
 
 function PayButton({ cartItems }) {
     const [isLoading, setIsLoading] = useState(false);  // Manage loading state
-    const url = "http://localhost:5001/api";
+    const url = "https://swifkart-backend.vercel.app/api";
     const user = useSelector((state) => state.auth);
 
     const handleCheckout = () => {
