@@ -1,4 +1,4 @@
-export const url = "http://localhost:5001/api";
+export const url = "https://swifkart-backend.vercel.app/api";
 
 export const setHeaders = () => {
   const headers = {
