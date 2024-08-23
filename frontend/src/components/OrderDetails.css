@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     min-height: 100vh;
 }
 
@@ -19,17 +21,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(218, 229, 255);
     border-radius: 5px;
     padding: 20px;
 }
 
 .order-details-id-title{
-    font-size: 40px;
+    font-size: 27px;
     font-weight: 500;
     margin-bottom: 10px;
     color: white;
-    background-color: rgb(28, 28, 28);
+    background-color: rgb(6, 53, 95);
     padding: 1px 10px;
     width: 100%;
     text-align: center;
@@ -39,12 +41,17 @@
 .details-summary-section{
     display: flex;
     gap: 20px;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: rgb(202, 202, 202);
+    justify-content: center;
+    align-items: center;
     padding: 1px 5px;
     border-radius: 5px;
+}
+
+.details-summary-section p{
+    padding: 1px 5px;
+    border-radius: 5px;
+    background-color: rgb(152, 193, 255);
+    color: rgb(6, 53, 95);
 }
 
 .order-id-span{
@@ -58,52 +65,98 @@
 }
 
 .order-details-products-title{
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     text-align: center;
-    padding: 10px;
-    text-decoration: underline;
+    padding: 1px 10px;
+    background-color: rgb(79, 149, 255);
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 
 .products-cards{
     list-style: none;
     display: flex;
+    flex-direction: column;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .products-card{
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(152, 193, 255);
     padding: 10px;
     border-radius: 5px;
-    width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .order-details-updates-section{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background-color: rgb(202, 202, 202);
-    border-radius: 5px;
-    padding: 1px 5px;
-    margin-top: 10px;
+    gap: 20px;
 
 }
 
+.order-details-updates-section p{
+    background-color: rgb(152, 193, 255);
+    border-radius: 5px;
+    padding: 1px 5px;
+    color: rgb(6, 53, 95);
+}
+
 .shipping-info-order-details{
-    text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 15px;
-    text-decoration: underline;
+    text-align: center;
+    padding: 1px 10px;
+    background-color: rgb(79, 149, 255);
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.product-icon{
+    font-size: 70px;
+    color: rgb(6, 53, 95);
+}
+
+
+.product-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(6, 53, 95);
+}
+
+.products-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap-status{
+    text-transform: capitalize;
 }
 
 @media (max-width:800px) {
     .order-details-id-title{
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .products-card{

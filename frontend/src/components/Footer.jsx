@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { faAsterisk, faFileLines, faLock, faMapLocationDot, faRotateLeft, faSitemap } from '@fortawesome/free-solid-svg-icons'
+import { faShop, faFileCircleCheck, faCartShopping, faRightToBracket, faUserLarge, faMapLocationDot } from '@fortawesome/free-solid-svg-icons'
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,11 +18,11 @@ function Footer() {
             <div className="footer-section">
               <p className='footer-title'>Quick Links</p>
               <ul>
-                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faAsterisk}/>Terms and Conditions</li></Link>
-                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faLock}/>Privacy Policy</li></Link>
-                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faRotateLeft}/>Returns Policy</li></Link>
-                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faFileLines}/>Documentation</li></Link>
-                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faSitemap}/>Sitemap</li></Link>
+                <Link to=""><li><FontAwesomeIcon className='footer-icons' icon={faShop}/>Store</li></Link>
+                <Link to="/orders"><li><FontAwesomeIcon className='footer-icons' icon={faFileCircleCheck}/>Previous Orders</li></Link>
+                <Link to="/cart"><li><FontAwesomeIcon className='footer-icons' icon={faCartShopping}/>Shopping Cart</li></Link>
+                <Link to="/login"><li><FontAwesomeIcon className='footer-icons' icon={faRightToBracket}/>Login</li></Link>
+                <Link to="/register"><li><FontAwesomeIcon className='footer-icons' icon={faUserLarge}/>Register</li></Link>
               </ul>
             </div>
             <div className="footer-section">
@@ -44,7 +44,7 @@ function Footer() {
                 LE1 7RH, <br />
                 United Kingdom <br />
                 <br />
-                <a href="" target='_blank'><FontAwesomeIcon className='footer-icons' icon={faMapLocationDot}/>View on Google Maps</a>
+                <a href="https://www.google.com/maps/place/University+of+Leicester/@52.6211393,-1.1272074,17z/data=!3m1!4b1!4m6!3m5!1s0x4877612fa55d947f:0xf8da17fed74e0044!8m2!3d52.6211393!4d-1.1246325!16zL20vMDF6bjR5?entry=ttu&g_ep=EgoyMDI0MDgyMC4xIKXMDSoASAFQAw%3D%3D" target='_blank'><FontAwesomeIcon className='footer-icons' icon={faMapLocationDot}/>View on Google Maps</a>
               </p>
             </div>
           </div>

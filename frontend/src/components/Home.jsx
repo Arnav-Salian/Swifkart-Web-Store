@@ -5,7 +5,8 @@ import { productsApi, useGetAllProductsQuery } from '../features/productsApi';
 import './Home.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { addToCart, getTotals } from '../features/cartSlice'; // import getTotals
+import { addToCart, getTotals } from '../features/cartSlice';
+import redbullBanner from '../assets/redbullBanner.jpg'
 
 function Home() {
   document.title = "Swifkart Online Store";
@@ -25,6 +26,7 @@ function Home() {
             {isLoading ? <p>Loading...</p> : error ? 
             <p>An error occurred...</p> : 
             <>
+            <img className='redbull-banner' src={redbullBanner} alt="" draggable="false"/>
             <div className="products">
               {data?.map(product => <div key={product.id} className="product">
                   

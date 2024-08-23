@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './OrderDetails.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {  } from '@fortawesome/free-solid-svg-icons'
+import { faBox, faTruck, faWallet } from '@fortawesome/free-solid-svg-icons'
 
 function OrderDetails() {
     const { orderId } = useParams();
@@ -51,11 +51,18 @@ function OrderDetails() {
                         <ul className='products-cards'>
                             {order.products && Array.isArray(order.products) ? (
                                 order.products.map(product => (
-                                    <li className='products-card' key={product.id}>
-                                        <p><b>Name:</b> {product.name}</p>
-                                        <p><b>Price:</b> £{product.price}</p>
-                                        <p><b>Quantity:</b> {product.cartQuantity}</p>
-                                    </li>
+                                    <>
+                                        
+                                        <li className='products-card' key={product.id}>
+                                            <div className="products-icon"><FontAwesomeIcon icon={faBox} className='product-icon' /></div>
+                                            <div className="product-information">
+                                                <p><b>Name:</b> {product.name}</p>
+                                                <p><b>Price:</b> £{product.price}</p>
+                                                <p><b>Quantity:</b> {product.cartQuantity}</p>
+                                            </div>
+                                            
+                                        </li>
+                                    </>  
                                 ))
                             ) : (
                                 <p>No products found.</p>
@@ -65,8 +72,8 @@ function OrderDetails() {
                     <p className='shipping-info-order-details'>Shipping Information</p>
                     <div className="order-details-updates-section">
 
-                        <p><b>Delivery Status:</b> {order.delivery_status || 'N/A'}</p>
-                        <p><b>Payment Status:</b> {order.payment_status || 'N/A'}</p>
+                        <p><b><FontAwesomeIcon icon={faTruck} /> Delivery Status:</b> <span className='cap-status'>{order.delivery_status || 'N/A'}</span></p>
+                        <p><b><FontAwesomeIcon icon={faWallet} /> Payment Status:</b> <span className='cap-status'>{order.payment_status || 'N/A'}</span></p>
     
                     </div>
                 </div>
