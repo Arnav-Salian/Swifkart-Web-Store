@@ -10,7 +10,7 @@ function OrderDetails() {
     const [order, setOrder] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const url = "http://localhost:5001/api/orders";
+    const url = "https://swifkart-backend.vercel.app/api/orders";
 
     useEffect(() => {
         axios.get(`${url}/${orderId}`)
@@ -53,7 +53,7 @@ function OrderDetails() {
                                 order.products.map(product => (
                                     <li className='products-card' key={product.id}>
                                         <p><b>Name:</b> {product.name}</p>
-                                        <p><b>Price:</b>: £{product.price}</p>
+                                        <p><b>Price:</b> £{product.price}</p>
                                         <p><b>Quantity:</b> {product.cartQuantity}</p>
                                     </li>
                                 ))

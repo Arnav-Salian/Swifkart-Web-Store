@@ -10,7 +10,7 @@ function Orders() {
     const [orders, setOrders] = useState([]);
     const [redirect, setRedirect] = useState(false);
     const user = useSelector((state) => state.auth);
-    const url = "http://localhost:5001/api/orders";
+    const url = "https://swifkart-backend.vercel.app/api/orders";
 
     useEffect(() => {
         if (!user._id) {
