@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCcStripe } from '@fortawesome/free-brands-svg-icons';
 
 function PayButton({ cartItems }) {
-    const [isLoading, setIsLoading] = useState(false);  // Manage loading state
+    const [isLoading, setIsLoading] = useState(false);  
     const url = "https://swifkart-backend.vercel.app/api";
     const user = useSelector((state) => state.auth);
 
     const handleCheckout = () => {
-        setIsLoading(true);  // Set loading to true when button is clicked
+        setIsLoading(true);  
         axios
             .post(`${url}/stripe/create-checkout-session`, {
                 cartItems,

@@ -11,6 +11,8 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import CheckoutSuccess from './components/CheckoutSuccess';
 import { loadUser } from './features/authSlice';
+import Orders from './components/Orders';
+import OrderDetails from './components/OrderDetails';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +27,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/orders/:orderId" element={<OrderDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

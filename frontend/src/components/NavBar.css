@@ -76,3 +76,15 @@
     color: rgb(79, 79, 79);
 }
 
+.orders-icon{
+    padding-top: 3px;
+    font-size: 23px;
+    color: rgb(79, 79, 79);
+}
+
+@media (max-width:700px) {
+    .logo-container .logo{
+        width: 150px;
+    }
+    
+}

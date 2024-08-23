@@ -1,0 +1,98 @@
+.orders-wrapper{
+    display: grid;
+    grid-template-columns: minmax(0,1250px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 80vh;
+}
+
+.orders-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orders-title{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.orders-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.orders-card{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    justify-content: space-around;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 20px rgba(0,0,0,0.18);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.orders-left-section .orders-bag-icon{
+    font-size: 70px;
+    color: rgb(6, 53, 95);
+}
+
+.orders-middle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.orders-right-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-details-btn{
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 3px solid rgb(6, 53, 95);
+    background-color: rgb(229, 237, 255);
+    color: rgb(6, 53, 95);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.view-details-btn:hover{
+    background-color: rgb(6, 53, 95);
+    color: white;
+}
+
+.orders-id{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(6, 53, 95);
+    background-color: rgb(202, 202, 202);
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+.orders-total{
+    color: rgb(6, 53, 95);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@media (max-width:700px) {
+    .orders-card{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
