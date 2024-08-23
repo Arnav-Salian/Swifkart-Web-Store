@@ -8,14 +8,16 @@ Swifkart is an e-commerce application currently under development, featuring a f
 - **Product Management**: Add, update, and delete products.
 - **Shopping Cart**: Add products to the cart and proceed to checkout.
 - **Order Processing**: Place orders and pay securely using Stripe.
+- **Order History**: View a list of past orders.
+- **Order Details**: Access detailed order information via unique URLs for each order.
 
 ## Project Structure
 
 - **Frontend**: Built with React and Redux
-  - User interface for browsing products, managing a shopping cart, and processing payments.
+  - User interface for browsing products, managing a shopping cart, processing payments, viewing order history, and accessing detailed order information.
 
 - **Backend**: Utilizes Node.js, Express, and MongoDB
-  - RESTful API for handling user authentication, product management, and order processing.
+  - RESTful API for handling user authentication, product management, order processing, and storing order data with unique URLs for detailed orders.
   - Stripe integration for secure payment processing.
 
 ## Demo Website
@@ -37,6 +39,8 @@ The Swifkart application has been deployed using Vercel. The environment variabl
      - **Billing Postal Code**: Any postal code
    - Click **Pay**.
    - You will be redirected to a success page.
+5. Navigate to the **Order History** page to view a list of your past orders.
+6. Click on an order to view detailed information, which is accessible via a unique URL.
 
 For more details on testing payments, refer to the [Stripe Testing Documentation](https://docs.stripe.com/payments/accept-a-payment?platform=web&ui=stripe-hosted&locale=en-GB#testing).
 
