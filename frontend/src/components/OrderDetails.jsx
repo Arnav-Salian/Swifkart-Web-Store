@@ -6,6 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faBox, faTruck, faWallet } from '@fortawesome/free-solid-svg-icons'
 
 function OrderDetails() {
+    document.title = "Order Details | Swifkart Online Store";
     const { orderId } = useParams();
     const [order, setOrder] = useState(null);
     const [error, setError] = useState(null);

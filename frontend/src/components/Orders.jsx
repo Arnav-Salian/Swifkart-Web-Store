@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 
 function Orders() {
+    document.title = "Previous Orders | Swifkart Online Store";
     const [orders, setOrders] = useState([]);
     const [redirect, setRedirect] = useState(false);
     const user = useSelector((state) => state.auth);
