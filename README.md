@@ -24,11 +24,11 @@ Swifkart is an e-commerce application currently under development, featuring a f
 
 The Swifkart application has been deployed using Vercel. The environment variables have been configured in the Vercel dashboard, and the deployment is integrated with the GitHub repository. You can access the live demo at:
 
-[swifkart.vercel.app](https://swifkart.vercel.app)
+[swifkart.arnav27.com](https://swifkart.arnav27.com/)
 
 ## Usage
 
-1. Access the demo website at [swifkart.vercel.app](https://swifkart.vercel.app).
+1. Access the demo website at [swifkart.arnav27.com](https://swifkart.arnav27.com/).
 2. Add products to the cart.
 3. Proceed to checkout.
 4. Complete payments using Stripe:
