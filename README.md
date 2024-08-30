@@ -50,13 +50,4 @@ For more details on testing payments, refer to the [Stripe Testing Documentation
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Payment Processing**: Stripe
-- **Other**: Git, GitHub, JavaScript, Toast Notifications, Helmet-Async, Vercel Deployment
-
-## Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/)
-- [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Stripe](https://stripe.com/)
+- **Other**: Git, GitHub, JavaScript, Toast Notifications, Vercel Deployment
