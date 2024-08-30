@@ -1,6 +1,6 @@
 # Swifkart Online Store
 
-Swifkart is an e-commerce application currently under development, featuring a full-stack architecture. The project includes a React and Redux frontend, a Node.js and Express backend, and MongoDB for data storage. It also integrates Stripe for secure payment processing.
+Swifkart is a fully developed e-commerce application featuring a full-stack architecture. The project includes a React and Redux frontend, a Node.js and Express backend, and MongoDB for data storage. It also integrates Stripe for secure payment processing.
 
 ## Features
 
