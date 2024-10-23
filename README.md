@@ -1,6 +1,6 @@
 # Swifkart Online Store
 
-Swifkart is an e-commerce application currently under development, featuring a full-stack architecture. The project includes a React and Redux frontend, a Node.js and Express backend, and MongoDB for data storage. It also integrates Stripe for secure payment processing.
+Swifkart is a fully developed e-commerce application featuring a full-stack architecture. The project includes a React and Redux frontend, a Node.js and Express backend, and MongoDB for data storage. It also integrates Stripe for secure payment processing.
 
 ## Features
 
@@ -24,11 +24,11 @@ Swifkart is an e-commerce application currently under development, featuring a f
 
 The Swifkart application has been deployed using Vercel. The environment variables have been configured in the Vercel dashboard, and the deployment is integrated with the GitHub repository. You can access the live demo at:
 
-[swifkart.vercel.app](https://swifkart.vercel.app)
+[swifkart.arnav27.com](https://swifkart.arnav27.com/)
 
 ## Usage
 
-1. Access the demo website at [swifkart.vercel.app](https://swifkart.vercel.app).
+1. Access the demo website at [swifkart.arnav27.com](https://swifkart.arnav27.com/).
 2. Add products to the cart.
 3. Proceed to checkout.
 4. Complete payments using Stripe:
@@ -50,13 +50,4 @@ For more details on testing payments, refer to the [Stripe Testing Documentation
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Payment Processing**: Stripe
-- **Other**: Git, GitHub, JavaScript, Toast Notifications, Helmet-Async, Vercel Deployment
-
-## Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Redux](https://redux.js.org/)
-- [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Stripe](https://stripe.com/)
+- **Other**: Git, GitHub, JavaScript, Toast Notifications, Vercel Deployment
