@@ -1,6 +1,6 @@
-# robots.txt for https://swifkart.arnav27.com/
+# robots.txt for https://swifkart.arnav.uk/
 
 User-agent: *
 Disallow:
 
-Sitemap: https://swifkart.arnav27.com/sitemap.xml
+Sitemap: https://swifkart.arnav.uk/sitemap.xml
